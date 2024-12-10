@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\cppProject.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{F31BBDD1-B3E8-3BCC-9652-680E16935819}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\cppProject.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\cppProjectEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\.vsconfig" />
+    <Filter Include="Config">
+      <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\cppProject">
+      <UniqueIdentifier>{4FA77B74-6413-3FF7-8717-3892B0DED5C2}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\cppProject\cppProject.Build.cs">
+      <Filter>Source\cppProject</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\cppProject\cppProject.cpp">
+      <Filter>Source\cppProject</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\cppProject\cppProject.h">
+      <Filter>Source\cppProject</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\cppProject\Teleporter.cpp">
+      <Filter>Source\cppProject</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\cppProject\Teleporter.h">
+      <Filter>Source\cppProject</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

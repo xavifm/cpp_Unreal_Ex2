@@ -1,0 +1,15 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UnrealEditor-cppProject-3910.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"C:\Users\sdasd\Documents\Unreal Projects\cppProject\Intermediate\Build\Win64\x64\cppProjectEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h.obj"
+"C:\Users\sdasd\Documents\Unreal Projects\cppProject\Intermediate\Build\Win64\x64\UnrealEditor\Development\cppProject\cppProject.init.gen.cpp.obj"
+"C:\Users\sdasd\Documents\Unreal Projects\cppProject\Intermediate\Build\Win64\x64\UnrealEditor\Development\cppProject\Teleporter.gen.cpp.obj"
+"C:\Users\sdasd\Documents\Unreal Projects\cppProject\Intermediate\Build\Win64\x64\UnrealEditor\Development\cppProject\cppProject.cpp.obj"
+"C:\Users\sdasd\Documents\Unreal Projects\cppProject\Intermediate\Build\Win64\x64\UnrealEditor\Development\cppProject\Teleporter.cpp.obj"
+"C:\Users\sdasd\Documents\Unreal Projects\cppProject\Intermediate\Build\Win64\x64\UnrealEditor\Development\cppProject\Default.rc2.res"
+/OUT:"C:\Users\sdasd\Documents\Unreal Projects\cppProject\Intermediate\Build\Win64\x64\UnrealEditor\Development\cppProject\UnrealEditor-cppProject-3910.lib"

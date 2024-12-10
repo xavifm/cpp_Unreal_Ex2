@@ -1,0 +1,15 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\users\\sdasd\\documents\\unreal projects\\cppproject\\intermediate\\build\\win64\\unrealeditor\\inc\\cppproject\\uht\\teleporter.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\users\\sdasd\\documents\\unreal projects\\cppproject\\intermediate\\build\\win64\\x64\\cppprojecteditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "c:\\users\\sdasd\\documents\\unreal projects\\cppproject\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\cppproject\\definitions.cppproject.h",
+            "c:\\users\\sdasd\\documents\\unreal projects\\cppproject\\source\\cppproject\\teleporter.h",
+            "c:\\users\\sdasd\\documents\\unreal projects\\cppproject\\intermediate\\build\\win64\\unrealeditor\\inc\\cppproject\\uht\\teleporter.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
