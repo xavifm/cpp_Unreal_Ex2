@@ -1,19 +1,19 @@
 {
     "Version": "1.2",
     "Data": {
-        "Source": "c:\\users\\sdasd\\documents\\github\\cpp_unreal_ut-hub\\cppproject\\intermediate\\build\\win64\\unrealeditor\\inc\\cppproject\\uht\\teleporter.gen.cpp",
+        "Source": "c:\\users\\sdasd\\documents\\github\\cpp_unreal_ex2\\cppproject\\intermediate\\build\\win64\\unrealeditor\\inc\\cppproject\\uht\\teleporter.gen.cpp",
         "ProvidedModule": "",
-        "PCH": "c:\\users\\sdasd\\documents\\github\\cpp_unreal_ut-hub\\cppproject\\intermediate\\build\\win64\\x64\\cppprojecteditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "PCH": "c:\\users\\sdasd\\documents\\github\\cpp_unreal_ex2\\cppproject\\intermediate\\build\\win64\\x64\\cppprojecteditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
         "Includes": [
-            "c:\\users\\sdasd\\documents\\github\\cpp_unreal_ut-hub\\cppproject\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\cppproject\\definitions.cppproject.h",
-            "c:\\users\\sdasd\\documents\\github\\cpp_unreal_ut-hub\\cppproject\\source\\cppproject\\teleporter.h",
+            "c:\\users\\sdasd\\documents\\github\\cpp_unreal_ex2\\cppproject\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\cppproject\\definitions.cppproject.h",
+            "c:\\users\\sdasd\\documents\\github\\cpp_unreal_ex2\\cppproject\\source\\cppproject\\teleporter.h",
             "d:\\unreal\\ue_5.4\\engine\\source\\developer\\meshmergeutilities\\public\\staticmeshcomponentadapter.h",
             "d:\\unreal\\ue_5.4\\engine\\source\\developer\\meshmergeutilities\\public\\imaterialbakingadapter.h",
             "d:\\unreal\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\components\\boxcomponent.h",
             "d:\\unreal\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\components\\shapecomponent.h",
             "d:\\unreal\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\shapecomponent.generated.h",
             "d:\\unreal\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\boxcomponent.generated.h",
-            "c:\\users\\sdasd\\documents\\github\\cpp_unreal_ut-hub\\cppproject\\intermediate\\build\\win64\\unrealeditor\\inc\\cppproject\\uht\\teleporter.generated.h"
+            "c:\\users\\sdasd\\documents\\github\\cpp_unreal_ex2\\cppproject\\intermediate\\build\\win64\\unrealeditor\\inc\\cppproject\\uht\\teleporter.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

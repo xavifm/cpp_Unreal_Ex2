@@ -1,8 +1,8 @@
 {
 	"SourceFiles": [
-		"C:\\Users\\sdasd\\Documents\\GitHub\\cpp_Unreal_UT-HUB\\cppProject\\Source\\cppProject\\cppProject.Build.cs",
-		"C:\\Users\\sdasd\\Documents\\GitHub\\cpp_Unreal_UT-HUB\\cppProject\\Source\\cppProject.Target.cs",
-		"C:\\Users\\sdasd\\Documents\\GitHub\\cpp_Unreal_UT-HUB\\cppProject\\Source\\cppProjectEditor.Target.cs"
+		"C:\\Users\\sdasd\\Documents\\GitHub\\cpp_Unreal_Ex2\\cppProject\\Source\\cppProject\\cppProject.Build.cs",
+		"C:\\Users\\sdasd\\Documents\\GitHub\\cpp_Unreal_Ex2\\cppProject\\Source\\cppProject.Target.cs",
+		"C:\\Users\\sdasd\\Documents\\GitHub\\cpp_Unreal_Ex2\\cppProject\\Source\\cppProjectEditor.Target.cs"
 	],
 	"EngineVersion": "5.4.4"
 }

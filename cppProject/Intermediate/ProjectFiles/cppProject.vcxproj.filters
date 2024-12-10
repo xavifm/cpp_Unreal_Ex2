@@ -39,6 +39,18 @@
     <ClInclude Include="..\..\Source\cppProject\cppProject.h">
       <Filter>Source\cppProject</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\cppProject\PerceptionComponent.cpp">
+      <Filter>Source\cppProject</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\cppProject\PerceptionComponent.h">
+      <Filter>Source\cppProject</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\cppProject\PerceptionSubsystem.cpp">
+      <Filter>Source\cppProject</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\cppProject\PerceptionSubsystem.h">
+      <Filter>Source\cppProject</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\cppProject\Teleporter.cpp">
       <Filter>Source\cppProject</Filter>
     </ClCompile>

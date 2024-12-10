@@ -1,11 +1,11 @@
-"C:\Users\sdasd\Documents\Unreal Projects\cppProject\Source\cppProject\Teleporter.cpp"
-/FI"C:\Users\sdasd\Documents\Unreal Projects\cppProject\Intermediate\Build\Win64\x64\cppProjectEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h"
-/FI"C:\Users\sdasd\Documents\Unreal Projects\cppProject\Intermediate\Build\Win64\x64\UnrealEditor\Development\cppProject\Definitions.cppProject.h"
-/Yu"C:\Users\sdasd\Documents\Unreal Projects\cppProject\Intermediate\Build\Win64\x64\cppProjectEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h"
-/Fp"C:\Users\sdasd\Documents\Unreal Projects\cppProject\Intermediate\Build\Win64\x64\cppProjectEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h.pch"
-/Fo"C:\Users\sdasd\Documents\Unreal Projects\cppProject\Intermediate\Build\Win64\x64\UnrealEditor\Development\cppProject\Teleporter.cpp.obj"
-/sourceDependencies "C:\Users\sdasd\Documents\Unreal Projects\cppProject\Intermediate\Build\Win64\x64\UnrealEditor\Development\cppProject\Teleporter.cpp.dep.json"
-@"C:\Users\sdasd\Documents\Unreal Projects\cppProject\Intermediate\Build\Win64\x64\UnrealEditor\Development\cppProject\cppProject.Shared.rsp"
+"C:\Users\sdasd\Documents\GitHub\cpp_Unreal_UT-HUB\cppProject\Source\cppProject\Teleporter.cpp"
+/FI"C:\Users\sdasd\Documents\GitHub\cpp_Unreal_UT-HUB\cppProject\Intermediate\Build\Win64\x64\cppProjectEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h"
+/FI"C:\Users\sdasd\Documents\GitHub\cpp_Unreal_UT-HUB\cppProject\Intermediate\Build\Win64\x64\UnrealEditor\Development\cppProject\Definitions.cppProject.h"
+/Yu"C:\Users\sdasd\Documents\GitHub\cpp_Unreal_UT-HUB\cppProject\Intermediate\Build\Win64\x64\cppProjectEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h"
+/Fp"C:\Users\sdasd\Documents\GitHub\cpp_Unreal_UT-HUB\cppProject\Intermediate\Build\Win64\x64\cppProjectEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h.pch"
+/Fo"C:\Users\sdasd\Documents\GitHub\cpp_Unreal_UT-HUB\cppProject\Intermediate\Build\Win64\x64\UnrealEditor\Development\cppProject\Teleporter.cpp.obj"
+/sourceDependencies "C:\Users\sdasd\Documents\GitHub\cpp_Unreal_UT-HUB\cppProject\Intermediate\Build\Win64\x64\UnrealEditor\Development\cppProject\Teleporter.cpp.dep.json"
+@"C:\Users\sdasd\Documents\GitHub\cpp_Unreal_UT-HUB\cppProject\Intermediate\Build\Win64\x64\UnrealEditor\Development\cppProject\cppProject.Shared.rsp"
 /Zc:inline
 /nologo
 /Oi

@@ -7,23 +7,27 @@
 #include "UObject/GeneratedCppIncludes.h"
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodecppProject_init() {}
+	CPPPROJECT_API UFunction* Z_Construct_UDelegateFunction_cppProject_OnActorDetected__DelegateSignature();
 	static FPackageRegistrationInfo Z_Registration_Info_UPackage__Script_cppProject;
 	FORCENOINLINE UPackage* Z_Construct_UPackage__Script_cppProject()
 	{
 		if (!Z_Registration_Info_UPackage__Script_cppProject.OuterSingleton)
 		{
+			static UObject* (*const SingletonFuncArray[])() = {
+				(UObject* (*)())Z_Construct_UDelegateFunction_cppProject_OnActorDetected__DelegateSignature,
+			};
 			static const UECodeGen_Private::FPackageParams PackageParams = {
 				"/Script/cppProject",
-				nullptr,
-				0,
+				SingletonFuncArray,
+				UE_ARRAY_COUNT(SingletonFuncArray),
 				PKG_CompiledIn | 0x00000000,
-				0x58565AF2,
-				0x2FBEFA7D,
+				0x7A104016,
+				0xAD23A2DF,
 				METADATA_PARAMS(0, nullptr)
 			};
 			UECodeGen_Private::ConstructUPackage(Z_Registration_Info_UPackage__Script_cppProject.OuterSingleton, PackageParams);
 		}
 		return Z_Registration_Info_UPackage__Script_cppProject.OuterSingleton;
 	}
-	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_cppProject(Z_Construct_UPackage__Script_cppProject, TEXT("/Script/cppProject"), Z_Registration_Info_UPackage__Script_cppProject, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0x58565AF2, 0x2FBEFA7D));
+	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_cppProject(Z_Construct_UPackage__Script_cppProject, TEXT("/Script/cppProject"), Z_Registration_Info_UPackage__Script_cppProject, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0x7A104016, 0xAD23A2DF));
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

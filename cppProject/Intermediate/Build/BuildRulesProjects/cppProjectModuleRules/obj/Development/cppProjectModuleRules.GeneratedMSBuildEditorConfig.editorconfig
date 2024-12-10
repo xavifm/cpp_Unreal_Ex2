@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = cppProjectModuleRules
-build_property.ProjectDir = C:\Users\sdasd\Documents\GitHub\cpp_Unreal_UT-HUB\cppProject\Intermediate\Build\BuildRulesProjects\cppProjectModuleRules\
+build_property.ProjectDir = C:\Users\sdasd\Documents\GitHub\cpp_Unreal_Ex2\cppProject\Intermediate\Build\BuildRulesProjects\cppProjectModuleRules\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

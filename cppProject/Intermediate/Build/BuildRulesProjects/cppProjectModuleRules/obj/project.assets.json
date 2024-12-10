@@ -8567,11 +8567,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\sdasd\\Documents\\GitHub\\cpp_Unreal_UT-HUB\\cppProject\\Intermediate\\Build\\BuildRulesProjects\\cppProjectModuleRules\\cppProjectModuleRules.csproj",
+      "projectUniqueName": "C:\\Users\\sdasd\\Documents\\GitHub\\cpp_Unreal_Ex2\\cppProject\\Intermediate\\Build\\BuildRulesProjects\\cppProjectModuleRules\\cppProjectModuleRules.csproj",
       "projectName": "cppProjectModuleRules",
-      "projectPath": "C:\\Users\\sdasd\\Documents\\GitHub\\cpp_Unreal_UT-HUB\\cppProject\\Intermediate\\Build\\BuildRulesProjects\\cppProjectModuleRules\\cppProjectModuleRules.csproj",
+      "projectPath": "C:\\Users\\sdasd\\Documents\\GitHub\\cpp_Unreal_Ex2\\cppProject\\Intermediate\\Build\\BuildRulesProjects\\cppProjectModuleRules\\cppProjectModuleRules.csproj",
       "packagesPath": "C:\\Users\\sdasd\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\sdasd\\Documents\\GitHub\\cpp_Unreal_UT-HUB\\cppProject\\Intermediate\\Build\\BuildRulesProjects\\cppProjectModuleRules\\obj\\",
+      "outputPath": "C:\\Users\\sdasd\\Documents\\GitHub\\cpp_Unreal_Ex2\\cppProject\\Intermediate\\Build\\BuildRulesProjects\\cppProjectModuleRules\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\sdasd\\AppData\\Roaming\\NuGet\\NuGet.Config",
