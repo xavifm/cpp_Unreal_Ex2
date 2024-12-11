@@ -15,16 +15,23 @@ class AActor;
 #endif
 #define CPPPROJECT_PerceptionComponent_generated_h
 
-#define FID_cppProject_Source_cppProject_PerceptionComponent_h_9_DELEGATE \
+#define FID_cppProject_Source_cppProject_PerceptionComponent_h_7_DELEGATE \
 CPPPROJECT_API void FOnActorDetected_DelegateWrapper(const FMulticastScriptDelegate& OnActorDetected, AActor* DetectedActor);
 
 
-#define FID_cppProject_Source_cppProject_PerceptionComponent_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_cppProject_Source_cppProject_PerceptionComponent_h_12_GENERATED_BODY \
+	friend struct Z_Construct_UScriptStruct_FPerceptionInfo_Statics; \
+	CPPPROJECT_API static class UScriptStruct* StaticStruct();
+
+
+template<> CPPPROJECT_API UScriptStruct* StaticStruct<struct FPerceptionInfo>();
+
+#define FID_cppProject_Source_cppProject_PerceptionComponent_h_24_RPC_WRAPPERS_NO_PURE_DECLS \
 	DECLARE_FUNCTION(execUpdatePerception); \
 	DECLARE_FUNCTION(execEnablePerception);
 
 
-#define FID_cppProject_Source_cppProject_PerceptionComponent_h_14_INCLASS_NO_PURE_DECLS \
+#define FID_cppProject_Source_cppProject_PerceptionComponent_h_24_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUPerceptionComponent(); \
 	friend struct Z_Construct_UClass_UPerceptionComponent_Statics; \
@@ -33,7 +40,7 @@ public: \
 	DECLARE_SERIALIZER(UPerceptionComponent)
 
 
-#define FID_cppProject_Source_cppProject_PerceptionComponent_h_14_ENHANCED_CONSTRUCTORS \
+#define FID_cppProject_Source_cppProject_PerceptionComponent_h_24_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	UPerceptionComponent(UPerceptionComponent&&); \
@@ -45,13 +52,13 @@ public: \
 	NO_API virtual ~UPerceptionComponent();
 
 
-#define FID_cppProject_Source_cppProject_PerceptionComponent_h_11_PROLOG
-#define FID_cppProject_Source_cppProject_PerceptionComponent_h_14_GENERATED_BODY \
+#define FID_cppProject_Source_cppProject_PerceptionComponent_h_21_PROLOG
+#define FID_cppProject_Source_cppProject_PerceptionComponent_h_24_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_cppProject_Source_cppProject_PerceptionComponent_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_cppProject_Source_cppProject_PerceptionComponent_h_14_INCLASS_NO_PURE_DECLS \
-	FID_cppProject_Source_cppProject_PerceptionComponent_h_14_ENHANCED_CONSTRUCTORS \
+	FID_cppProject_Source_cppProject_PerceptionComponent_h_24_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_cppProject_Source_cppProject_PerceptionComponent_h_24_INCLASS_NO_PURE_DECLS \
+	FID_cppProject_Source_cppProject_PerceptionComponent_h_24_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

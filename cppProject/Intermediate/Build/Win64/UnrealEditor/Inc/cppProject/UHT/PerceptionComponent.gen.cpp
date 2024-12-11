@@ -13,6 +13,7 @@ void EmptyLinkFunctionForGeneratedCodePerceptionComponent() {}
 CPPPROJECT_API UClass* Z_Construct_UClass_UPerceptionComponent();
 CPPPROJECT_API UClass* Z_Construct_UClass_UPerceptionComponent_NoRegister();
 CPPPROJECT_API UFunction* Z_Construct_UDelegateFunction_cppProject_OnActorDetected__DelegateSignature();
+CPPPROJECT_API UScriptStruct* Z_Construct_UScriptStruct_FPerceptionInfo();
 ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_UActorComponent();
 UPackage* Z_Construct_UPackage__Script_cppProject();
@@ -61,6 +62,80 @@ void FOnActorDetected_DelegateWrapper(const FMulticastScriptDelegate& OnActorDet
 	OnActorDetected.ProcessMulticastDelegate<UObject>(&Parms);
 }
 // End Delegate FOnActorDetected
+
+// Begin ScriptStruct FPerceptionInfo
+static FStructRegistrationInfo Z_Registration_Info_UScriptStruct_PerceptionInfo;
+class UScriptStruct* FPerceptionInfo::StaticStruct()
+{
+	if (!Z_Registration_Info_UScriptStruct_PerceptionInfo.OuterSingleton)
+	{
+		Z_Registration_Info_UScriptStruct_PerceptionInfo.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FPerceptionInfo, (UObject*)Z_Construct_UPackage__Script_cppProject(), TEXT("PerceptionInfo"));
+	}
+	return Z_Registration_Info_UScriptStruct_PerceptionInfo.OuterSingleton;
+}
+template<> CPPPROJECT_API UScriptStruct* StaticStruct<FPerceptionInfo>()
+{
+	return FPerceptionInfo::StaticStruct();
+}
+struct Z_Construct_UScriptStruct_FPerceptionInfo_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[] = {
+		{ "BlueprintType", "true" },
+		{ "ModuleRelativePath", "PerceptionComponent.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_DetectionRadius_MetaData[] = {
+		{ "Category", "Perception" },
+		{ "ModuleRelativePath", "PerceptionComponent.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_bCanDetectActors_MetaData[] = {
+		{ "Category", "Perception" },
+		{ "ModuleRelativePath", "PerceptionComponent.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_DetectionRadius;
+	static void NewProp_bCanDetectActors_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_bCanDetectActors;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static void* NewStructOps()
+	{
+		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FPerceptionInfo>();
+	}
+	static const UECodeGen_Private::FStructParams StructParams;
+};
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FPerceptionInfo_Statics::NewProp_DetectionRadius = { "DetectionRadius", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FPerceptionInfo, DetectionRadius), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_DetectionRadius_MetaData), NewProp_DetectionRadius_MetaData) };
+void Z_Construct_UScriptStruct_FPerceptionInfo_Statics::NewProp_bCanDetectActors_SetBit(void* Obj)
+{
+	((FPerceptionInfo*)Obj)->bCanDetectActors = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UScriptStruct_FPerceptionInfo_Statics::NewProp_bCanDetectActors = { "bCanDetectActors", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(FPerceptionInfo), &Z_Construct_UScriptStruct_FPerceptionInfo_Statics::NewProp_bCanDetectActors_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_bCanDetectActors_MetaData), NewProp_bCanDetectActors_MetaData) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FPerceptionInfo_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FPerceptionInfo_Statics::NewProp_DetectionRadius,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FPerceptionInfo_Statics::NewProp_bCanDetectActors,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FPerceptionInfo_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FStructParams Z_Construct_UScriptStruct_FPerceptionInfo_Statics::StructParams = {
+	(UObject* (*)())Z_Construct_UPackage__Script_cppProject,
+	nullptr,
+	&NewStructOps,
+	"PerceptionInfo",
+	Z_Construct_UScriptStruct_FPerceptionInfo_Statics::PropPointers,
+	UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FPerceptionInfo_Statics::PropPointers),
+	sizeof(FPerceptionInfo),
+	alignof(FPerceptionInfo),
+	RF_Public|RF_Transient|RF_MarkAsNative,
+	EStructFlags(0x00000001),
+	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FPerceptionInfo_Statics::Struct_MetaDataParams), Z_Construct_UScriptStruct_FPerceptionInfo_Statics::Struct_MetaDataParams)
+};
+UScriptStruct* Z_Construct_UScriptStruct_FPerceptionInfo()
+{
+	if (!Z_Registration_Info_UScriptStruct_PerceptionInfo.InnerSingleton)
+	{
+		UECodeGen_Private::ConstructUScriptStruct(Z_Registration_Info_UScriptStruct_PerceptionInfo.InnerSingleton, Z_Construct_UScriptStruct_FPerceptionInfo_Statics::StructParams);
+	}
+	return Z_Registration_Info_UScriptStruct_PerceptionInfo.InnerSingleton;
+}
+// End ScriptStruct FPerceptionInfo
 
 // Begin Class UPerceptionComponent Function EnablePerception
 struct Z_Construct_UFunction_UPerceptionComponent_EnablePerception_Statics
@@ -164,7 +239,7 @@ struct Z_Construct_UClass_UPerceptionComponent_Statics
 		{ "IncludePath", "PerceptionComponent.h" },
 		{ "ModuleRelativePath", "PerceptionComponent.h" },
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_DetectionRadius_MetaData[] = {
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_PerceptionInfo_MetaData[] = {
 		{ "Category", "Perception" },
 		{ "ModuleRelativePath", "PerceptionComponent.h" },
 	};
@@ -173,7 +248,7 @@ struct Z_Construct_UClass_UPerceptionComponent_Statics
 		{ "ModuleRelativePath", "PerceptionComponent.h" },
 	};
 #endif // WITH_METADATA
-	static const UECodeGen_Private::FFloatPropertyParams NewProp_DetectionRadius;
+	static const UECodeGen_Private::FStructPropertyParams NewProp_PerceptionInfo;
 	static const UECodeGen_Private::FMulticastDelegatePropertyParams NewProp_OnActorDetected;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
@@ -187,10 +262,10 @@ struct Z_Construct_UClass_UPerceptionComponent_Statics
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
-const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UPerceptionComponent_Statics::NewProp_DetectionRadius = { "DetectionRadius", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPerceptionComponent, DetectionRadius), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_DetectionRadius_MetaData), NewProp_DetectionRadius_MetaData) };
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UPerceptionComponent_Statics::NewProp_PerceptionInfo = { "PerceptionInfo", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPerceptionComponent, PerceptionInfo), Z_Construct_UScriptStruct_FPerceptionInfo, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_PerceptionInfo_MetaData), NewProp_PerceptionInfo_MetaData) }; // 1642129996
 const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_UPerceptionComponent_Statics::NewProp_OnActorDetected = { "OnActorDetected", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPerceptionComponent, OnActorDetected), Z_Construct_UDelegateFunction_cppProject_OnActorDetected__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OnActorDetected_MetaData), NewProp_OnActorDetected_MetaData) }; // 267924689
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UPerceptionComponent_Statics::PropPointers[] = {
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPerceptionComponent_Statics::NewProp_DetectionRadius,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPerceptionComponent_Statics::NewProp_PerceptionInfo,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPerceptionComponent_Statics::NewProp_OnActorDetected,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UPerceptionComponent_Statics::PropPointers) < 2048);
@@ -233,13 +308,16 @@ UPerceptionComponent::~UPerceptionComponent() {}
 // Begin Registration
 struct Z_CompiledInDeferFile_FID_cppProject_Source_cppProject_PerceptionComponent_h_Statics
 {
+	static constexpr FStructRegisterCompiledInInfo ScriptStructInfo[] = {
+		{ FPerceptionInfo::StaticStruct, Z_Construct_UScriptStruct_FPerceptionInfo_Statics::NewStructOps, TEXT("PerceptionInfo"), &Z_Registration_Info_UScriptStruct_PerceptionInfo, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FPerceptionInfo), 1642129996U) },
+	};
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UPerceptionComponent, UPerceptionComponent::StaticClass, TEXT("UPerceptionComponent"), &Z_Registration_Info_UClass_UPerceptionComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPerceptionComponent), 2675816189U) },
+		{ Z_Construct_UClass_UPerceptionComponent, UPerceptionComponent::StaticClass, TEXT("UPerceptionComponent"), &Z_Registration_Info_UClass_UPerceptionComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPerceptionComponent), 1045802524U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_cppProject_Source_cppProject_PerceptionComponent_h_1335030794(TEXT("/Script/cppProject"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_cppProject_Source_cppProject_PerceptionComponent_h_596340428(TEXT("/Script/cppProject"),
 	Z_CompiledInDeferFile_FID_cppProject_Source_cppProject_PerceptionComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_cppProject_Source_cppProject_PerceptionComponent_h_Statics::ClassInfo),
-	nullptr, 0,
+	Z_CompiledInDeferFile_FID_cppProject_Source_cppProject_PerceptionComponent_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_cppProject_Source_cppProject_PerceptionComponent_h_Statics::ScriptStructInfo),
 	nullptr, 0);
 // End Registration
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

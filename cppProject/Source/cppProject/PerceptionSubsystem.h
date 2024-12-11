@@ -1,22 +1,21 @@
-// Fill out your copyright notice in the Description page of Project Settings.
-
 #pragma once
 
 #include "CoreMinimal.h"
 #include "Subsystems/WorldSubsystem.h"
 #include "PerceptionSubsystem.generated.h"
 
-/**
- * 
- */
+class UPerceptionComponent;
+
 UCLASS()
 class CPPPROJECT_API UPerceptionSubsystem : public UWorldSubsystem
 {
-	GENERATED_BODY()
-	
+    GENERATED_BODY()
+
 public:
     UPROPERTY()
     TArray<UPerceptionComponent*> RegisteredComponents;
+
+    void HandleActor(AActor* Actor);
 
     UFUNCTION()
     void RegisterComponent(UPerceptionComponent* PerceptionComponent);
@@ -28,4 +27,15 @@ public:
     void EnablePerceptionForActors(bool bEnable, TArray<AActor*> Actors);
 
     void InitPerceptionInfo(UPerceptionComponent* PerceptionComponent, float Radius);
+
+    void InitializeExistingActors();
+
+    virtual void Initialize(FSubsystemCollectionBase& Collection) override;
+
+    virtual void Deinitialize() override;
+
+private:
+    void HandlePostActorCreated(AActor* Actor);
+
+    FDelegateHandle ActorSpawnedDelegateHandle;
 };

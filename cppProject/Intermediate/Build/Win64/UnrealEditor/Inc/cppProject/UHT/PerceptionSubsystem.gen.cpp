@@ -184,9 +184,6 @@ struct Z_Construct_UClass_UPerceptionSubsystem_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
-#if !UE_BUILD_SHIPPING
-		{ "Comment", "/**\n * \n */" },
-#endif
 		{ "IncludePath", "PerceptionSubsystem.h" },
 		{ "ModuleRelativePath", "PerceptionSubsystem.h" },
 	};
@@ -258,10 +255,10 @@ UPerceptionSubsystem::~UPerceptionSubsystem() {}
 struct Z_CompiledInDeferFile_FID_cppProject_Source_cppProject_PerceptionSubsystem_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UPerceptionSubsystem, UPerceptionSubsystem::StaticClass, TEXT("UPerceptionSubsystem"), &Z_Registration_Info_UClass_UPerceptionSubsystem, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPerceptionSubsystem), 3940454862U) },
+		{ Z_Construct_UClass_UPerceptionSubsystem, UPerceptionSubsystem::StaticClass, TEXT("UPerceptionSubsystem"), &Z_Registration_Info_UClass_UPerceptionSubsystem, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPerceptionSubsystem), 932724013U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_cppProject_Source_cppProject_PerceptionSubsystem_h_4224790317(TEXT("/Script/cppProject"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_cppProject_Source_cppProject_PerceptionSubsystem_h_2501513144(TEXT("/Script/cppProject"),
 	Z_CompiledInDeferFile_FID_cppProject_Source_cppProject_PerceptionSubsystem_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_cppProject_Source_cppProject_PerceptionSubsystem_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
