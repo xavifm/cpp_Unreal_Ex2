@@ -4,7 +4,6 @@
 #include "Components/ActorComponent.h"
 #include "PerceptionComponent.generated.h"
 
-DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnActorDetected, AActor*, DetectedActor);
 
 USTRUCT(BlueprintType)
 struct FPerceptionInfo
@@ -29,25 +28,28 @@ public:
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Perception")
     FPerceptionInfo PerceptionInfo;
 
-    UPROPERTY(BlueprintAssignable, Category = "Perception")
-    FOnActorDetected OnActorDetected;
-
     UFUNCTION(BlueprintCallable, Category = "Perception")
     void EnablePerception(bool bEnable);
 
     UFUNCTION(BlueprintCallable, Category = "Perception")
     void UpdatePerception();
 
+
     void DebugDraw();
 
 protected:
     virtual void BeginPlay() override;
+
+    void HandleActorDetected(AActor* DetectedActor);
+
+    void HandleActorLost(AActor* LostActor);
 
     virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
 private:
     bool bPerceptionEnabled = true;
 
+    TArray<AActor*> GetWorldAssetsList();
     TArray<AActor*> GetComponentsInRange(float _detectionRadius);
     TSet<AActor*> DetectedActors;
 };

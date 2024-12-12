@@ -83,6 +83,7 @@ struct Z_Construct_UFunction_UPerceptionSubsystem_RegisterComponent_Statics
 	};
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "Category", "Perception" },
 		{ "ModuleRelativePath", "PerceptionSubsystem.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_PerceptionComponent_MetaData[] = {
@@ -98,7 +99,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UPerce
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPerceptionSubsystem_RegisterComponent_Statics::NewProp_PerceptionComponent,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UPerceptionSubsystem_RegisterComponent_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UPerceptionSubsystem_RegisterComponent_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPerceptionSubsystem, nullptr, "RegisterComponent", nullptr, nullptr, Z_Construct_UFunction_UPerceptionSubsystem_RegisterComponent_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UPerceptionSubsystem_RegisterComponent_Statics::PropPointers), sizeof(Z_Construct_UFunction_UPerceptionSubsystem_RegisterComponent_Statics::PerceptionSubsystem_eventRegisterComponent_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UPerceptionSubsystem_RegisterComponent_Statics::Function_MetaDataParams), Z_Construct_UFunction_UPerceptionSubsystem_RegisterComponent_Statics::Function_MetaDataParams) };
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UPerceptionSubsystem_RegisterComponent_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPerceptionSubsystem, nullptr, "RegisterComponent", nullptr, nullptr, Z_Construct_UFunction_UPerceptionSubsystem_RegisterComponent_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UPerceptionSubsystem_RegisterComponent_Statics::PropPointers), sizeof(Z_Construct_UFunction_UPerceptionSubsystem_RegisterComponent_Statics::PerceptionSubsystem_eventRegisterComponent_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UPerceptionSubsystem_RegisterComponent_Statics::Function_MetaDataParams), Z_Construct_UFunction_UPerceptionSubsystem_RegisterComponent_Statics::Function_MetaDataParams) };
 static_assert(sizeof(Z_Construct_UFunction_UPerceptionSubsystem_RegisterComponent_Statics::PerceptionSubsystem_eventRegisterComponent_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_UPerceptionSubsystem_RegisterComponent()
 {
@@ -128,6 +129,7 @@ struct Z_Construct_UFunction_UPerceptionSubsystem_UnregisterComponent_Statics
 	};
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "Category", "Perception" },
 		{ "ModuleRelativePath", "PerceptionSubsystem.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_PerceptionComponent_MetaData[] = {
@@ -143,7 +145,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UPerce
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPerceptionSubsystem_UnregisterComponent_Statics::NewProp_PerceptionComponent,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UPerceptionSubsystem_UnregisterComponent_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UPerceptionSubsystem_UnregisterComponent_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPerceptionSubsystem, nullptr, "UnregisterComponent", nullptr, nullptr, Z_Construct_UFunction_UPerceptionSubsystem_UnregisterComponent_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UPerceptionSubsystem_UnregisterComponent_Statics::PropPointers), sizeof(Z_Construct_UFunction_UPerceptionSubsystem_UnregisterComponent_Statics::PerceptionSubsystem_eventUnregisterComponent_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UPerceptionSubsystem_UnregisterComponent_Statics::Function_MetaDataParams), Z_Construct_UFunction_UPerceptionSubsystem_UnregisterComponent_Statics::Function_MetaDataParams) };
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UPerceptionSubsystem_UnregisterComponent_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPerceptionSubsystem, nullptr, "UnregisterComponent", nullptr, nullptr, Z_Construct_UFunction_UPerceptionSubsystem_UnregisterComponent_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UPerceptionSubsystem_UnregisterComponent_Statics::PropPointers), sizeof(Z_Construct_UFunction_UPerceptionSubsystem_UnregisterComponent_Statics::PerceptionSubsystem_eventUnregisterComponent_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UPerceptionSubsystem_UnregisterComponent_Statics::Function_MetaDataParams), Z_Construct_UFunction_UPerceptionSubsystem_UnregisterComponent_Statics::Function_MetaDataParams) };
 static_assert(sizeof(Z_Construct_UFunction_UPerceptionSubsystem_UnregisterComponent_Statics::PerceptionSubsystem_eventUnregisterComponent_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_UPerceptionSubsystem_UnregisterComponent()
 {
@@ -198,8 +200,8 @@ struct Z_Construct_UClass_UPerceptionSubsystem_Statics
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
 		{ &Z_Construct_UFunction_UPerceptionSubsystem_EnablePerceptionForActors, "EnablePerceptionForActors" }, // 2745816160
-		{ &Z_Construct_UFunction_UPerceptionSubsystem_RegisterComponent, "RegisterComponent" }, // 1640589994
-		{ &Z_Construct_UFunction_UPerceptionSubsystem_UnregisterComponent, "UnregisterComponent" }, // 594839472
+		{ &Z_Construct_UFunction_UPerceptionSubsystem_RegisterComponent, "RegisterComponent" }, // 1581842504
+		{ &Z_Construct_UFunction_UPerceptionSubsystem_UnregisterComponent, "UnregisterComponent" }, // 3303455520
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -255,10 +257,10 @@ UPerceptionSubsystem::~UPerceptionSubsystem() {}
 struct Z_CompiledInDeferFile_FID_cppProject_Source_cppProject_PerceptionSubsystem_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UPerceptionSubsystem, UPerceptionSubsystem::StaticClass, TEXT("UPerceptionSubsystem"), &Z_Registration_Info_UClass_UPerceptionSubsystem, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPerceptionSubsystem), 932724013U) },
+		{ Z_Construct_UClass_UPerceptionSubsystem, UPerceptionSubsystem::StaticClass, TEXT("UPerceptionSubsystem"), &Z_Registration_Info_UClass_UPerceptionSubsystem, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPerceptionSubsystem), 3246068653U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_cppProject_Source_cppProject_PerceptionSubsystem_h_2501513144(TEXT("/Script/cppProject"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_cppProject_Source_cppProject_PerceptionSubsystem_h_1437101980(TEXT("/Script/cppProject"),
 	Z_CompiledInDeferFile_FID_cppProject_Source_cppProject_PerceptionSubsystem_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_cppProject_Source_cppProject_PerceptionSubsystem_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

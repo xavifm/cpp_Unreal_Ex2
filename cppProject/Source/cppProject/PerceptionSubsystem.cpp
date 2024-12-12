@@ -13,6 +13,9 @@ void UPerceptionSubsystem::Initialize(FSubsystemCollectionBase& Collection)
     {
         ActorSpawnedDelegateHandle = World->AddOnActorSpawnedHandler(
             FOnActorSpawned::FDelegate::CreateUObject(this, &UPerceptionSubsystem::HandleActor));
+
+        ActorRemovalDelegateHandle = World->AddOnActorRemovedFromWorldHandler(
+            FOnActorSpawned::FDelegate::CreateUObject(this, &UPerceptionSubsystem::RemoveActor));
     }
 }
 
@@ -37,11 +40,6 @@ void UPerceptionSubsystem::InitializeExistingActors()
     }
 }
 
-void UPerceptionSubsystem::HandlePostActorCreated(AActor* Actor)
-{
-    HandleActor(Actor);
-}
-
 void UPerceptionSubsystem::HandleActor(AActor* Actor)
 {
     if (Actor)
@@ -51,6 +49,19 @@ void UPerceptionSubsystem::HandleActor(AActor* Actor)
         if (NewPerceptionComponent)
         {
             RegisterComponent(NewPerceptionComponent);
+        }
+    }
+}
+
+void UPerceptionSubsystem::RemoveActor(AActor* Actor)
+{
+    if (Actor)
+    {
+        UPerceptionComponent* NewPerceptionComponent = Cast<UPerceptionComponent>(Actor->GetComponentByClass(UPerceptionComponent::StaticClass()));
+
+        if (NewPerceptionComponent)
+        {
+            UnregisterComponent(NewPerceptionComponent);
         }
     }
 }

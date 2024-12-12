@@ -1,5 +1,7 @@
 #include "PerceptionComponent.h"
 #include "Engine/EngineTypes.h"
+#include "SubsystemCall.h"
+#include "EngineUtils.h"
 #include "PhysicsEngine/PhysicsCollisionHandler.h"
 #include "Engine/World.h"
 
@@ -26,20 +28,36 @@ void UPerceptionComponent::UpdatePerception()
     for (AActor* DetectedActor : DetectedActorsList)
     {
         if (!DetectedActors.Contains(DetectedActor))
-        {
             DetectedActors.Add(DetectedActor);
-            OnActorDetected.Broadcast(DetectedActor);
+    }
+}
+
+TArray<AActor*> UPerceptionComponent::GetWorldAssetsList() 
+{
+    TArray<AActor*> AssetsList;
+    UWorld* World = GetWorld();
+
+    for (TActorIterator<AActor> It(World); It; ++It)
+    {
+        AActor* Actor = *It;
+        if (Actor)
+        {
+            AssetsList.Add(Actor);
         }
     }
+
+    return AssetsList;
 }
 
 TArray<AActor*> UPerceptionComponent::GetComponentsInRange(float _detectionRadius)
 {
-    TArray<AActor*> OverlappingActors;
+    TArray<AActor*> ActorsList = GetWorldAssetsList();
+
+    TArray<AActor*> WorldActors;
     FVector OwnerLocation = GetOwner()->GetActorLocation();
     TArray<AActor*> DetectedActorsList;
 
-    for (AActor* Actor : OverlappingActors)
+    for (AActor* Actor : ActorsList)
     {
         if (Actor && Actor != GetOwner())
         {

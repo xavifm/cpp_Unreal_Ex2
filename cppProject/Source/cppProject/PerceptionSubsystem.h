@@ -17,10 +17,12 @@ public:
 
     void HandleActor(AActor* Actor);
 
-    UFUNCTION()
+    void RemoveActor(AActor* Actor);
+
+    UFUNCTION(BlueprintCallable, Category = "Perception")
     void RegisterComponent(UPerceptionComponent* PerceptionComponent);
 
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable, Category = "Perception")
     void UnregisterComponent(UPerceptionComponent* PerceptionComponent);
 
     UFUNCTION(BlueprintCallable, Category = "Perception")
@@ -35,7 +37,7 @@ public:
     virtual void Deinitialize() override;
 
 private:
-    void HandlePostActorCreated(AActor* Actor);
 
     FDelegateHandle ActorSpawnedDelegateHandle;
+    FDelegateHandle ActorRemovalDelegateHandle;
 };
