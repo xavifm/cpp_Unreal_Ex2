@@ -52,11 +52,16 @@ struct Z_Construct_UScriptStruct_FPerceptionInfo_Statics
 		{ "Category", "Perception" },
 		{ "ModuleRelativePath", "PerceptionComponent.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_CurrentTime_MetaData[] = {
+		{ "Category", "Perception" },
+		{ "ModuleRelativePath", "PerceptionComponent.h" },
+	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_DetectionRadius;
 	static void NewProp_bCanDetectActors_SetBit(void* Obj);
 	static const UECodeGen_Private::FBoolPropertyParams NewProp_bCanDetectActors;
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_TrackTime;
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_CurrentTime;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static void* NewStructOps()
 	{
@@ -71,10 +76,12 @@ void Z_Construct_UScriptStruct_FPerceptionInfo_Statics::NewProp_bCanDetectActors
 }
 const UECodeGen_Private::FBoolPropertyParams Z_Construct_UScriptStruct_FPerceptionInfo_Statics::NewProp_bCanDetectActors = { "bCanDetectActors", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(FPerceptionInfo), &Z_Construct_UScriptStruct_FPerceptionInfo_Statics::NewProp_bCanDetectActors_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_bCanDetectActors_MetaData), NewProp_bCanDetectActors_MetaData) };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FPerceptionInfo_Statics::NewProp_TrackTime = { "TrackTime", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FPerceptionInfo, TrackTime), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_TrackTime_MetaData), NewProp_TrackTime_MetaData) };
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FPerceptionInfo_Statics::NewProp_CurrentTime = { "CurrentTime", nullptr, (EPropertyFlags)0x0010000000020015, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FPerceptionInfo, CurrentTime), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CurrentTime_MetaData), NewProp_CurrentTime_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FPerceptionInfo_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FPerceptionInfo_Statics::NewProp_DetectionRadius,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FPerceptionInfo_Statics::NewProp_bCanDetectActors,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FPerceptionInfo_Statics::NewProp_TrackTime,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FPerceptionInfo_Statics::NewProp_CurrentTime,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FPerceptionInfo_Statics::PropPointers) < 2048);
 const UECodeGen_Private::FStructParams Z_Construct_UScriptStruct_FPerceptionInfo_Statics::StructParams = {
@@ -326,7 +333,7 @@ struct Z_Construct_UClass_UPerceptionComponent_Statics
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UPerceptionComponent_Statics::NewProp_PerceptionInfo = { "PerceptionInfo", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPerceptionComponent, PerceptionInfo), Z_Construct_UScriptStruct_FPerceptionInfo, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_PerceptionInfo_MetaData), NewProp_PerceptionInfo_MetaData) }; // 4203236631
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UPerceptionComponent_Statics::NewProp_PerceptionInfo = { "PerceptionInfo", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPerceptionComponent, PerceptionInfo), Z_Construct_UScriptStruct_FPerceptionInfo, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_PerceptionInfo_MetaData), NewProp_PerceptionInfo_MetaData) }; // 2372532331
 const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_UPerceptionComponent_Statics::NewProp_OnActorDetected = { "OnActorDetected", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPerceptionComponent, OnActorDetected), Z_Construct_UDelegateFunction_cppProject_OnActorDetected__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OnActorDetected_MetaData), NewProp_OnActorDetected_MetaData) }; // 267924689
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UPerceptionComponent_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPerceptionComponent_Statics::NewProp_PerceptionInfo,
@@ -373,13 +380,13 @@ UPerceptionComponent::~UPerceptionComponent() {}
 struct Z_CompiledInDeferFile_FID_cppProject_Source_cppProject_PerceptionComponent_h_Statics
 {
 	static constexpr FStructRegisterCompiledInInfo ScriptStructInfo[] = {
-		{ FPerceptionInfo::StaticStruct, Z_Construct_UScriptStruct_FPerceptionInfo_Statics::NewStructOps, TEXT("PerceptionInfo"), &Z_Registration_Info_UScriptStruct_PerceptionInfo, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FPerceptionInfo), 4203236631U) },
+		{ FPerceptionInfo::StaticStruct, Z_Construct_UScriptStruct_FPerceptionInfo_Statics::NewStructOps, TEXT("PerceptionInfo"), &Z_Registration_Info_UScriptStruct_PerceptionInfo, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FPerceptionInfo), 2372532331U) },
 	};
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UPerceptionComponent, UPerceptionComponent::StaticClass, TEXT("UPerceptionComponent"), &Z_Registration_Info_UClass_UPerceptionComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPerceptionComponent), 4005799485U) },
+		{ Z_Construct_UClass_UPerceptionComponent, UPerceptionComponent::StaticClass, TEXT("UPerceptionComponent"), &Z_Registration_Info_UClass_UPerceptionComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPerceptionComponent), 258643431U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_cppProject_Source_cppProject_PerceptionComponent_h_535097324(TEXT("/Script/cppProject"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_cppProject_Source_cppProject_PerceptionComponent_h_3829263944(TEXT("/Script/cppProject"),
 	Z_CompiledInDeferFile_FID_cppProject_Source_cppProject_PerceptionComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_cppProject_Source_cppProject_PerceptionComponent_h_Statics::ClassInfo),
 	Z_CompiledInDeferFile_FID_cppProject_Source_cppProject_PerceptionComponent_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_cppProject_Source_cppProject_PerceptionComponent_h_Statics::ScriptStructInfo),
 	nullptr, 0);

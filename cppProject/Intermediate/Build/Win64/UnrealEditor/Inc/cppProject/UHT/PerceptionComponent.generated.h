@@ -22,17 +22,17 @@ class AActor;
 
 template<> CPPPROJECT_API UScriptStruct* StaticStruct<struct FPerceptionInfo>();
 
-#define FID_cppProject_Source_cppProject_PerceptionComponent_h_25_DELEGATE \
+#define FID_cppProject_Source_cppProject_PerceptionComponent_h_26_DELEGATE \
 CPPPROJECT_API void FOnActorDetected_DelegateWrapper(const FMulticastScriptDelegate& OnActorDetected, AActor* DetectedActor);
 
 
-#define FID_cppProject_Source_cppProject_PerceptionComponent_h_30_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_cppProject_Source_cppProject_PerceptionComponent_h_31_RPC_WRAPPERS_NO_PURE_DECLS \
 	DECLARE_FUNCTION(execHandleActorDetected); \
 	DECLARE_FUNCTION(execUpdatePerception); \
 	DECLARE_FUNCTION(execEnablePerception);
 
 
-#define FID_cppProject_Source_cppProject_PerceptionComponent_h_30_INCLASS_NO_PURE_DECLS \
+#define FID_cppProject_Source_cppProject_PerceptionComponent_h_31_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUPerceptionComponent(); \
 	friend struct Z_Construct_UClass_UPerceptionComponent_Statics; \
@@ -41,7 +41,7 @@ public: \
 	DECLARE_SERIALIZER(UPerceptionComponent)
 
 
-#define FID_cppProject_Source_cppProject_PerceptionComponent_h_30_ENHANCED_CONSTRUCTORS \
+#define FID_cppProject_Source_cppProject_PerceptionComponent_h_31_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	UPerceptionComponent(UPerceptionComponent&&); \
@@ -53,13 +53,13 @@ public: \
 	NO_API virtual ~UPerceptionComponent();
 
 
-#define FID_cppProject_Source_cppProject_PerceptionComponent_h_27_PROLOG
-#define FID_cppProject_Source_cppProject_PerceptionComponent_h_30_GENERATED_BODY \
+#define FID_cppProject_Source_cppProject_PerceptionComponent_h_28_PROLOG
+#define FID_cppProject_Source_cppProject_PerceptionComponent_h_31_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_cppProject_Source_cppProject_PerceptionComponent_h_30_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_cppProject_Source_cppProject_PerceptionComponent_h_30_INCLASS_NO_PURE_DECLS \
-	FID_cppProject_Source_cppProject_PerceptionComponent_h_30_ENHANCED_CONSTRUCTORS \
+	FID_cppProject_Source_cppProject_PerceptionComponent_h_31_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_cppProject_Source_cppProject_PerceptionComponent_h_31_INCLASS_NO_PURE_DECLS \
+	FID_cppProject_Source_cppProject_PerceptionComponent_h_31_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
