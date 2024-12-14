@@ -7,6 +7,8 @@
         "Includes": [
             "c:\\users\\sdasd\\documents\\github\\cpp_unreal_ex2\\cppproject\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\cppproject\\definitions.cppproject.h",
             "c:\\users\\sdasd\\documents\\github\\cpp_unreal_ex2\\cppproject\\source\\cppproject\\subsystemcall.h",
+            "c:\\users\\sdasd\\documents\\github\\cpp_unreal_ex2\\cppproject\\source\\cppproject\\perceptionsubsystem.h",
+            "c:\\users\\sdasd\\documents\\github\\cpp_unreal_ex2\\cppproject\\intermediate\\build\\win64\\unrealeditor\\inc\\cppproject\\uht\\perceptionsubsystem.generated.h",
             "c:\\users\\sdasd\\documents\\github\\cpp_unreal_ex2\\cppproject\\intermediate\\build\\win64\\unrealeditor\\inc\\cppproject\\uht\\subsystemcall.generated.h"
         ],
         "ImportedModules": [],

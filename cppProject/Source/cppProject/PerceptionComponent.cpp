@@ -18,18 +18,22 @@ void UPerceptionComponent::EnablePerception(bool bEnable)
     bPerceptionEnabled = bEnable;
 }
 
-void UPerceptionComponent::UpdatePerception()
+void UPerceptionComponent::UpdatePerception(float DeltaTime)
 {
     if (!bPerceptionEnabled || !GetOwner())
         return;
 
-    TArray<AActor*> DetectedActorsList = GetComponentsInRange(PerceptionInfo.DetectionRadius);
+    PerceptionInfo.CurrentTime -= DeltaTime;
 
-    for (AActor* DetectedActor : DetectedActorsList)
-    {
-        if (!DetectedActors.Contains(DetectedActor))
-            DetectedActors.Add(DetectedActor);
-    }
+    if (PerceptionInfo.CurrentTime > 0)
+        return;
+
+    DetectedActors = GetComponentsInRange(PerceptionInfo.DetectionRadius);
+
+    for (AActor* DetectedActor : DetectedActors)
+        OnActorDetected.Broadcast(DetectedActor);
+
+    PerceptionInfo.CurrentTime = PerceptionInfo.TrackTime;
 }
 
 TArray<AActor*> UPerceptionComponent::GetWorldAssetsList() 
@@ -72,15 +76,21 @@ TArray<AActor*> UPerceptionComponent::GetComponentsInRange(float _detectionRadiu
     return DetectedActorsList;
 }
 
+void UPerceptionComponent::HandleActorDetected(AActor* DetectedActor)
+{
+    UE_LOG(LogTemp, Warning, TEXT("Detected Actor: %s"), *DetectedActor->GetName());
+}
 
 void UPerceptionComponent::BeginPlay()
 {
     Super::BeginPlay();
+
+    OnActorDetected.AddDynamic(this, &UPerceptionComponent::HandleActorDetected);
 }
 
 void UPerceptionComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
     Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 
-    UpdatePerception();
+    UpdatePerception(DeltaTime);
 }

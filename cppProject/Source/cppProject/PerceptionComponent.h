@@ -15,7 +15,14 @@ struct FPerceptionInfo
 
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Perception")
     bool bCanDetectActors = true;
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Perception")
+    float TrackTime = 10.f;
+
+    float CurrentTime = 0.f;
 };
+
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnActorDetected, AActor*, DetectedActor);
 
 UCLASS(ClassGroup = (Custom), meta = (BlueprintSpawnableComponent))
 class CPPPROJECT_API UPerceptionComponent : public UActorComponent
@@ -28,29 +35,28 @@ public:
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Perception")
     FPerceptionInfo PerceptionInfo;
 
+    UPROPERTY(BlueprintAssignable, Category = "Perception")
+    FOnActorDetected OnActorDetected;
+
     UFUNCTION(BlueprintCallable, Category = "Perception")
     void EnablePerception(bool bEnable);
 
     UFUNCTION(BlueprintCallable, Category = "Perception")
-    void UpdatePerception();
-
-
-    void DebugDraw();
+    void UpdatePerception(float DeltaTime);
 
 protected:
     virtual void BeginPlay() override;
 
+    UFUNCTION()
     void HandleActorDetected(AActor* DetectedActor);
-
-    void HandleActorLost(AActor* LostActor);
 
     virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
 private:
-    bool bPerceptionEnabled = true;
+    bool bPerceptionEnabled = false;
 
     TArray<AActor*> GetWorldAssetsList();
     TArray<AActor*> GetComponentsInRange(float _detectionRadius);
-    TSet<AActor*> DetectedActors;
+    TArray<AActor*> DetectedActors;
 };
 
