@@ -19,6 +19,7 @@ struct FPerceptionInfo
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Perception")
     float TrackTime = 10.f;
 
+    UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Perception")
     float CurrentTime = 0.f;
 };
 
